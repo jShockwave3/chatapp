@@ -17,9 +17,9 @@ function App() {
       event.preventDefault();  // Prevent the form from refreshing the page
 
       // Get the entered username from the input field
-      const userNameInput = document.getElementById('username').value;
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const { room } = useParams();
+      const name = document.getElementById('username').value;
+  
+    
 
   const socket = usePartySocket({
     party: "chat",
