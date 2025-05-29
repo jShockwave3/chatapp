@@ -13,7 +13,7 @@ import { nanoid } from "nanoid";
 import { names, type ChatMessage, type Message } from "../shared";
 
 function App() {
-  const [name] = useState(names[Math.floor(Math.random() * names.length)]);
+  const [name] = usernameInput.value.trim();
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const { room } = useParams();
 
