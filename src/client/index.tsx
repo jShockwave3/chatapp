@@ -13,7 +13,11 @@ import { nanoid } from "nanoid";
 import { names, type ChatMessage, type Message } from "../shared";
 
 function App() {
-  const [name] = usernameInput.value.trim();
+  document.getElementById('nameForm').addEventListener('submit', function(event) {
+      event.preventDefault();  // Prevent the form from refreshing the page
+
+      // Get the entered username from the input field
+      const userNameInput = document.getElementById('username').value;
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const { room } = useParams();
 
